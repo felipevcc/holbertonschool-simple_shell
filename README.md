@@ -1,23 +1,33 @@
 <div align="center">
-  <h1>Simple Shell</h1>
+  <h1>Simple Shell <img src="https://cdn-icons-png.flaticon.com/128/6821/6821173.png" width=60 align=center> </h1>
+  <h6>
+    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#man-page">Man Page</a>
+    ·
+    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#compilation">Compilation</a>
+    ·
+    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#command-list">Commands</a>
+    ·
+    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#usage">Usage</a>
+  </h6>
+  <img src="https://img.shields.io/github/repo-size/felipevcc/holbertonschool-printf?color=E1927F&labelColor=1a1e29&style=for-the-badge">
 </div>
 
-## Description
+## Description <img src="https://cdn-icons-png.flaticon.com/128/1903/1903496.png" width=45 align=center>
 
 Simple Shell is a command line interpreter developed in C language that emulates the most basic functionality of `sh`.
 
-## Man page
+## Man page <img src="https://cdn-icons-png.flaticon.com/128/781/781103.png" width=50 align=center>
 
 The man page is a file wich explains in detail how Simple Shell works. If you want see a full explanation of this function you can run our man page this way:
 ```
 $ man ./man_1_simple_shell
 ```
 
-## Flowchart
+## Flowchart <img src="https://cdn-icons-png.flaticon.com/128/3051/3051633.png" width=45 align=center>
 
 <img height=300 src="https://img.freepik.com/premium-vector/progress-bar-doodle-sketch-style-loading-icon-image-hand-drawn-vector-illustration_356415-1238.jpg?w=2000" alt="flowchart">
 
-## Compilation
+## Compilation <img src="https://cdn-icons-png.flaticon.com/128/8084/8084300.png" width=50 align=center>
 
 To compile the program this command has to be executed:
 ```
@@ -28,7 +38,7 @@ To run the shell is like this:
 $ ./hsh
 ```
 
-## Command list
+## Command list <img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>
 
 | Command  | Description |
 | -------- |:------------|
@@ -38,7 +48,7 @@ $ ./hsh
 | env      | Displays the current environment |
 | exit     | Causes the shell to terminate |
 
-## Usage
+## Usage <img src="https://cdn-icons-png.flaticon.com/512/3123/3123008.png" width=50 align=center>
 
 The shell can be used in interactive or non-interactive mode.
 The interactive mode is how the shell is normally used, the executable file is run and we can write commands, here is an example:
@@ -58,7 +68,7 @@ Here is a video using the non-interactive mode:
 
 video...
 
-## Authors
+## Authors <img src="https://cdn-icons-png.flaticon.com/128/2463/2463510.png" width=50 align=center>
 
 * Charline Mosquera <a href="https://github.com/CharCoder" rel="nofollow"><img align="center" alt="github" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" height="24" /></a>
 * Felipe Villamizar <a href="https://github.com/felipevcc" rel="nofollow"><img align="center" alt="github" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" height="24" /></a>
