@@ -9,7 +9,7 @@
     ·
     <a href="https://github.com/felipevcc/holbertonschool-simple_shell#usage-">Usage</a>
   </h6>
-  <img src="https://img.shields.io/github/repo-size/felipevcc/holbertonschool-printf?color=E1927F&labelColor=1a1e29&style=for-the-badge">
+  <img src="https://img.shields.io/github/repo-size/felipevcc/holbertonschool-simple_shell?color=E1927F&labelColor=1a1e29&style=for-the-badge">
 </div>
 
 ## Description <img src="https://cdn-icons-png.flaticon.com/128/1903/1903496.png" width=45 align=center>
