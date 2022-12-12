@@ -1,13 +1,13 @@
 <div align="center">
   <h1>Simple Shell <img src="https://cdn-icons-png.flaticon.com/128/6821/6821173.png" width=60 align=center> </h1>
   <h6>
-    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#man-page">Man Page</a>
+    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#man-page-">Man Page</a>
     ·
-    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#compilation">Compilation</a>
+    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#compilation-">Compilation</a>
     ·
-    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#command-list">Commands</a>
+    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#command-list-">Commands</a>
     ·
-    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#usage">Usage</a>
+    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#usage-">Usage</a>
   </h6>
   <img src="https://img.shields.io/github/repo-size/felipevcc/holbertonschool-printf?color=E1927F&labelColor=1a1e29&style=for-the-badge">
 </div>
