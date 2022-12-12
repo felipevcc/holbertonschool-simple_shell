@@ -34,7 +34,7 @@ $ ./hsh
 | -------- |:------------|
 | ls       | Will list all files and directories in current working directory |
 | cd       | Move between directories |
-| pwd      | writes to standard output the full path name of the current directory |
+| pwd      | Writes to standard output the full path name of the current directory |
 | env      | Displays the current environment |
 | exit     | Causes the shell to terminate |
 
@@ -54,7 +54,7 @@ $ cat test_ls_2 | ./hsh
 hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 ```
-Here is a video using the non-interactive mode
+Here is a video using the non-interactive mode:
 
 video...
 
