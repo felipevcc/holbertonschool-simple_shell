@@ -62,3 +62,6 @@ video...
 
 * Charline Mosquera <a href="https://github.com/CharCoder" rel="nofollow"><img align="center" alt="github" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" height="24" /></a>
 * Felipe Villamizar <a href="https://github.com/felipevcc" rel="nofollow"><img align="center" alt="github" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" height="24" /></a>
+<br>
+
+> Project developed during the [Holberton School](https://www.holbertonschool.com/) program.
