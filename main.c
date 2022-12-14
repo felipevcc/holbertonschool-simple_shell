@@ -1,23 +1,35 @@
-#include "shell.h"
+#include "main.h"
 
 /**
  * main -
 */
 int main(void)
 {
-    int (*func)(void);
-    char command[256];
+	char *buff = NULL;
+	size_t buff_size;
+	char sep[] = " ";
+	char *buff_args = NULL;
+	int i = 0;
 
-    while (1)
-    {
-        printf("$ ");
-        scanf(" %99[^\n]", command);
-        func = check_command(command);
+	while (1)
+	{
+		printf("hsh$ ");	
+		getline(&buff, &buff_size, stdin);
 
-        if (!func)
-            break;
-        
-        printf("\n");
-    }
-    return (0);
+
+		while (buff_args[i])
+		{
+			if (i == 0)
+				buff_args[i] = strtok(buff, sep);
+			else
+				buff_args[i] = strtok(NULL, sep);
+			i++;
+		}
+
+		
+
+		printf("%s\n", buff_args);
+		break;
+	}
+	return (0);	
 }
