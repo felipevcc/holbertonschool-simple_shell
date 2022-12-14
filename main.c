@@ -8,8 +8,10 @@
 int main(void)
 {
 	char *buff = NULL;
-	size_t buff_size = 0;
+	size_t read_size = 0;
+	ssize_t buff_size = 0;
 	int id;
+	char *args[100];
 	/*char sep[] = " ";*/
 	/*int i = 0;*/
 
@@ -18,11 +20,14 @@ int main(void)
 		if (isatty(0))
 			printf("hsh$ ");
 
-		buff_size = getline(&buff, &buff_size, stdin);
+		buff_size = getline(&buff, &read_size, stdin);
 		if (buff_size == -1)
 			break;
 
 		buff[buff_size - 1] = '\0';
+
+		args[0] = buff;
+		args[1] = NULL;
 
 		if (_strcmp("exit", buff) == 0)
 			break;
@@ -30,13 +35,11 @@ int main(void)
 		id = fork();
 		if (id == 0)
 		{
-			if (execve(buff, NULL, NULL) == -1)
+			if (execve(buff, args, NULL) == -1)
 				perror("Error:");
 		}
 		else
 			wait(NULL);
-
-		printf("\n");
 	}
 	return (0);
 }
