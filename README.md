@@ -25,7 +25,7 @@ $ man ./man_1_simple_shell
 
 ## Flowchart <img src="https://cdn-icons-png.flaticon.com/128/3051/3051633.png" width=45 align=center>
 
-<img src="https://i.imgur.com/6WMpY2g.jpg" alt="flowchart">
+<img src="https://i.imgur.com/VvzOSbM.jpg" alt="flowchart">
 
 ## Compilation <img src="https://cdn-icons-png.flaticon.com/128/8084/8084300.png" width=50 align=center>
 
