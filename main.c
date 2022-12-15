@@ -11,7 +11,7 @@ int main(void)
 	size_t read_size = 0;
 	ssize_t buff_size = 0;
 	int id;
-	char *args[100];
+	char *args[100];	
 	/*char sep[] = " ";*/
 	/*int i = 0;*/
 
@@ -39,7 +39,7 @@ int main(void)
 				perror("Error:");
 		}
 		else
-			wait(NULL);
+			wait(NULL);	
 	}
 	return (0);
 }
