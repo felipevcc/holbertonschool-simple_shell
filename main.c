@@ -3,17 +3,15 @@
 /**
  * main - open shell, project base
  * Return: int
-*/
+ */
 
 int main(void)
 {
-	char *buff = NULL;
+	char *buff = NULL, *args[100], **tmp;
 	size_t read_size = 0;
 	ssize_t buff_size = 0;
 	int id;
-	char *args[100];	
-	/*char sep[] = " ";*/
-	/*int i = 0;*/
+	/*int i;*/
 
 	while (1)
 	{
@@ -32,6 +30,9 @@ int main(void)
 		if (_strcmp("exit", buff) == 0)
 			break;
 
+		tmp = _split(getenv("PATH"), ":");
+		printf("%s\n", tmp[1]);
+		
 		id = fork();
 		if (id == 0)
 		{
@@ -39,7 +40,10 @@ int main(void)
 				perror("Error:");
 		}
 		else
-			wait(NULL);	
+			wait(NULL);
 	}
+
+	free(args[0]);
+	free(args[1]);
 	return (0);
 }
