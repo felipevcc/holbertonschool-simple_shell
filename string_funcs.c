@@ -46,15 +46,55 @@ char **_split(char *str, char *sep)
 	int i = 0;
 
 	aux = strtok(str, sep);
-	split_str = (char **)malloc(sizeof(char *) *100);
+	split_str = (char **)malloc(sizeof(char *) * 100);
 
-	while (aux != NULL)
+	while (aux)
 	{
-		split_str[i] = aux;
-		/*printf("%s\n", split_str[i]);*/
+		split_str[i] = aux;	
 		aux = strtok(NULL, sep);
 		i++;
 	}
-	/*printf("%s\n", split_str[1]);*/
 	return (split_str);
 }
+
+/**
+ * _strcat - function that concatenates two strings
+ * @dest: string
+ * @src: string
+ * Return: @dest
+ */
+
+char *_strcat(char *dest, char *src)
+{
+	int a, b;
+
+	for (a = 0; dest[a] != '\0'; a += 1)
+	{}
+
+	for (b = 0; src[b] != '\0'; b += 1)
+	{
+		dest[a] = src[b];
+		a++;
+	}
+	dest[a] = '\0';
+	return (dest);
+}
+
+/**
+ * _strlen - string length
+ * @s: string
+ * Return: result
+ *
+ */
+
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+		i++;
+
+	return (i);
+}
+
+

@@ -8,19 +8,37 @@
 
 char *search_path(char *command)
 {
-    char *path = getenv("PATH"), *aux = NULL, *split_path[100], *cpy_path = NULL;
-	int i = 0;
-	(void)command;
+	char **path, **path2;
+	char *path_concat = NULL;
+	int i = 0, path_len = 0;
+	struct stat info;
 
-    _strcpy(cpy_path, path);
+	path = _split(getenv("PATH"), ":");
+	/*path2 = _split(getenv("PATH"), ":");*/
 
-    while ((aux = strtok(path, ":")) != NULL)
-    {
-        /*printf("%s\n", aux);*/
-		split_path[i] = aux;
-		printf("%s\n", split_path[i]);
-		aux = NULL;
+	while (path[i])
+	{
+		path_len = _strlen(path[i]);	
+
+		/*printf("path2[i] = %s\n", path2[i]);*/
+
+		if (path[i][path_len - 1] == '/')
+			path_concat = _strcat(path[i], command);
+		else
+		{
+			path_concat = _strcat(path[i], "/");
+			path_concat = _strcat(path_concat, command);
+		}
+
+		if (stat(path_concat, &info) == 0)	
+			break;
+
+		/*path[i] = path2[i];*/
+		printf("path[i] = %s\n", path[i]);	
+		/*printf("path[i][len-1] = %c\n", path[i][path_len - 1]);*/
+
+		/*path_concat = NULL;*/
 		i++;
-    }
-	return (*split_path);
+	}
+	return (path_concat);
 }
