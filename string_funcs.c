@@ -48,6 +48,12 @@ char **_split(char *str, char *sep)
 	aux = strtok(str, sep);
 	split_str = (char **)malloc(sizeof(char *) * 100);
 
+	if (!split_str)
+	{
+		free(split_str);
+		return (NULL);
+	}
+
 	while (aux)
 	{
 		split_str[i] = aux;	

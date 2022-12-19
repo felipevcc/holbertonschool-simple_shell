@@ -10,8 +10,7 @@ int main(void)
 	char *buff = NULL, *args[100], *path;
 	size_t read_size = 0;
 	ssize_t buff_size = 0;
-	int id;
-	/*int i;*/
+	int id;	
 
 	while (1)
 	{
