@@ -14,6 +14,9 @@ char *search_path(char *command)
 	int i = 0, path_len = 0;
 	struct stat info;
 
+	if (command[0] == '/')
+		return (command);
+
 	path_cpy = malloc(_strlen(path) + 1);
 
 	path_cpy = _strcpy(path_cpy, path);

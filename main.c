@@ -7,10 +7,11 @@
 
 int main(void)
 {
-	char *buff = NULL, *args[100], *path;
+	char *buff = NULL, *path;
+	char **args;
 	size_t read_size = 0;
 	ssize_t buff_size = 0;
-	int id;
+	int id, i = 0;
 
 	while (1)
 	{
@@ -20,11 +21,9 @@ int main(void)
 		buff_size = getline(&buff, &read_size, stdin);
 		if (buff_size == -1)
 			break;
-
 		buff[buff_size - 1] = '\0';
 
-		args[0] = buff;
-		args[1] = NULL;
+		args = _split(buff, " ");
 
 		if (_strcmp("exit", buff) == 0)
 			break;
@@ -39,9 +38,13 @@ int main(void)
 		}
 		else
 			wait(NULL);
-	}
 
-	free(args[0]);
-	free(args[1]);
+		while (args[i])
+		{
+			free(args[i]);
+			i++;
+		}
+		free(args);
+	}
 	return (0);
 }
