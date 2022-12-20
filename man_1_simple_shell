@@ -4,7 +4,7 @@
 hsh - Simple Shell. Command line interpreter
 
 .SH SYNOPSIS
-empty
+Run ./hsh [command] [argument] for interactive mode and echo "[command] [argument]" | ./hsh for non-interactive mode.
 
 .SH DESCRIPTION
 Simple Shell is a command line interpreter developed in C language that emulates the most basic functionality of "sh".

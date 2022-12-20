@@ -17,6 +17,7 @@ char **_split(char *str, char *sep);
 char *_strcat(char *dest, char *src);
 int _strlen(char *s);
 char *_getenv(char *env_var);
+void *_calloc(unsigned int nmemb, unsigned int size);
 
 extern char **environ;
 

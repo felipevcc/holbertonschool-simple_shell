@@ -53,7 +53,7 @@ char **_split(char *str, char *sep)
 	int i = 0;
 
 	aux = strtok(str, sep);
-	split_str = (char **)malloc(sizeof(char *) * 100);
+	split_str = (char **)_calloc(100, sizeof(char *));
 
 	if (!split_str)
 	{

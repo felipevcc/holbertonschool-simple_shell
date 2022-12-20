@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	char *buff = NULL, *path;
+	char *buff = NULL;
 	char **args;
 	size_t read_size = 0;
 	ssize_t buff_size = 0;
@@ -28,12 +28,12 @@ int main(void)
 		if (_strcmp("exit", buff) == 0)
 			break;
 
-		path = search_path(args[0]);
+		args[0] = search_path(args[0]);
 
 		id = fork();
 		if (id == 0)
 		{
-			if (execve(path, args, NULL) == -1)
+			if (execve(args[0], args, NULL) == -1)
 				perror("Error");
 		}
 		else
