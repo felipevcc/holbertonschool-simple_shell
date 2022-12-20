@@ -11,7 +11,7 @@ char *search_path(char *command)
 	char *path = _getenv("PATH"), *path_cpy;
 	char **path_split;
 	char *path_concat = NULL;
-	int i = 0, path_len = 0, j = 0;
+	int i = 0, path_len = 0;
 	struct stat info;
 
 	path_cpy = malloc(_strlen(path) + 1);
