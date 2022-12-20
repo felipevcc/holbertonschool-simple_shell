@@ -40,6 +40,13 @@ char *_strcpy(char *dest, char *src)
 	return (c);
 }
 
+/**
+ * _split - split string
+ * @str: string
+ * @sep: separator
+ * Return: divided path
+ */
+
 char **_split(char *str, char *sep)
 {
 	char *aux, **split_str;
@@ -56,7 +63,7 @@ char **_split(char *str, char *sep)
 
 	while (aux)
 	{
-		split_str[i] = aux;	
+		split_str[i] = aux;
 		aux = strtok(NULL, sep);
 		i++;
 	}

@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _getenv - get env variables
+ * @env_var: env variable
+ * Return: env variable result, its content
+ */
+
 char *_getenv(char *env_var)
 {
 	int i = 0, j;
