@@ -11,7 +11,7 @@ int main(void)
 	char **args;
 	size_t read_size = 0;
 	ssize_t buff_size = 0;
-	int id;
+	int id, status;
 
 	while (1)
 	{
@@ -32,6 +32,12 @@ int main(void)
 
 		args[0] = search_path(args[0]);
 
+		if (args[0] == NULL)
+		{
+			perror("Error");
+			return (-1);
+		}
+
 		id = fork();
 		if (id == 0)
 		{
@@ -39,7 +45,11 @@ int main(void)
 				perror("Error");
 		}
 		else
-			wait(NULL);
+		{
+			wait(&status);
+			if (WIFEXITED(status))
+				status = WEXITSTATUS(status);
+		}
 	}
 	return (0);
 }
