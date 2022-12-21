@@ -38,13 +38,12 @@ To run the shell is like this:
 $ ./hsh
 ```
 
-## Command list <img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>
+## List of built-in commands <img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>
+
+This list is of the built-in commands, apart from those found in the PATH.
 
 | Command  | Description |
 | -------- |:------------|
-| ls       | Will list all files and directories in current working directory |
-| cd       | Move between directories |
-| pwd      | Writes to standard output the full path name of the current directory |
 | env      | Displays the current environment |
 | exit     | Causes the shell to terminate |
 
@@ -52,8 +51,17 @@ $ ./hsh
 
 The shell can be used in interactive or non-interactive mode.
 The interactive mode is how the shell is normally used, the executable file is run and we can write commands, here is an example:
-
-video...
+```
+$ ./hsh
+hsh$ ls
+file1 file2 directory/
+hsh$ pwd
+/home/user/simple_shell/
+hsh$ echo hello_world
+hello_world
+hsh$ exit
+$
+```
 
 In the non-interactive mode you pass the command to the executable file with a pipe operator, as shown in the following example:
 ```
@@ -64,9 +72,6 @@ $ cat test_ls_2 | ./hsh
 hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 ```
-Here is a video using the non-interactive mode:
-
-video...
 
 ## Authors <img src="https://cdn-icons-png.flaticon.com/128/2463/2463510.png" width=50 align=center>
 
