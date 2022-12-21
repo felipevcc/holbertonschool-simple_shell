@@ -12,9 +12,9 @@ char *search_path(char *command)
 	char **path_split;
 	char *path_concat = NULL;
 	int i = 0, path_len = 0, status = 0;
-	struct stat info;
+	struct stat info;	
 
-	if (command[0] == '/')
+	if (stat(command, &info) == 0)
 		return (command);
 
 	path_cpy = malloc(_strlen(path) + 1);

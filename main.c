@@ -19,16 +19,17 @@ int main(void)
 			printf("hsh$ ");
 
 		buff_size = getline(&buff, &read_size, stdin);
-		if (buff_size == -1)
+		if (buff_size == -1 || _strcmp("exit\n", buff) == 0)
+		{
+			free(buff);
 			break;
+		}
 		buff[buff_size - 1] = '\0';
+		
+		if (_strcmp("env", buff) == 0)
+			_env();
 
 		args = _split(buff, " ");
-
-		if (_strcmp("exit", buff) == 0)
-			break;
-		else if (_strcmp("env", buff) == 0)
-			_env();
 
 		args[0] = search_path(args[0]);
 
@@ -50,6 +51,7 @@ int main(void)
 			if (WIFEXITED(status))
 				status = WEXITSTATUS(status);
 		}
+		free(args);
 	}
 	return (0);
 }
