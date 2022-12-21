@@ -11,7 +11,7 @@ int main(void)
 	char **args;
 	size_t read_size = 0;
 	ssize_t buff_size = 0;
-	int id, i = 0;
+	int id;
 
 	while (1)
 	{
@@ -27,6 +27,8 @@ int main(void)
 
 		if (_strcmp("exit", buff) == 0)
 			break;
+		else if (_strcmp("env", buff) == 0)
+			_env();
 
 		args[0] = search_path(args[0]);
 
@@ -38,13 +40,6 @@ int main(void)
 		}
 		else
 			wait(NULL);
-
-		while (args[i])
-		{
-			free(args[i]);
-			i++;
-		}
-		free(args);
 	}
 	return (0);
 }
