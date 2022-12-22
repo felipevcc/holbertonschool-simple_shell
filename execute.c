@@ -3,6 +3,7 @@
 /**
  * execute - execute command path, child process
  * @args: arguments
+ * Return: exit status
  */
 
 int execute(char **args)
