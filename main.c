@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	char *buff = NULL, *aux, **args;
+	char *buff = NULL, **args;
 	size_t read_size = 0;
 	ssize_t buff_size = 0;
 	int exit_status = 0, empty_line = 1, i;
