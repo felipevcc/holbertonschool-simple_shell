@@ -10,14 +10,12 @@ int main(void)
 	char *buff = NULL, **args;
 	size_t read_size = 0;
 	ssize_t buff_size = 0;
-	int exit_status;
+	int exit_status = 0;
 
 	while (1)
 	{
 		if (isatty(0))
 			printf("hsh$ ");
-
-		exit_status = 0;
 
 		buff_size = getline(&buff, &read_size, stdin);
 		if (buff_size == -1 || _strcmp("exit\n", buff) == 0)
