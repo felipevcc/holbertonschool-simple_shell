@@ -30,6 +30,11 @@ int main(void)
 			_env();
 			continue;
 		}
+		else if (buff[0] == " ")
+		{
+			exit_status = 0;
+			continue;
+		}
 
 		args = _split(buff, " ");
 
