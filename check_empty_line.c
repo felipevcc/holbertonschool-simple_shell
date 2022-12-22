@@ -2,7 +2,7 @@
 
 /**
  * empty_line - checks if exists a empty line
- * @line: str
+ * @buff: line
  * Return: 0 or 1 (int)
  */
 

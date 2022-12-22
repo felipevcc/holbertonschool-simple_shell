@@ -35,7 +35,7 @@ int main(void)
 		{
 			exit_status = 0;
 			continue;
-		}	
+		}
 
 		args = _split(buff, " ");
 		args[0] = search_path(args[0]);
@@ -44,7 +44,6 @@ int main(void)
 			exit_status = execute(args);
 		else
 			perror("Error");
-
 		free(args);
 	}
 	return (exit_status);
