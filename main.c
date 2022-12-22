@@ -7,10 +7,10 @@
 
 int main(void)
 {
-	char *buff = NULL, **args;
+	char *buff = NULL, *aux, **args;
 	size_t read_size = 0;
 	ssize_t buff_size = 0;
-	int exit_status = 0;
+	int exit_status = 0, empty_line = 1, i;
 
 	while (1)
 	{
@@ -30,7 +30,16 @@ int main(void)
 			_env();
 			continue;
 		}
-		else if (buff[0] == ' ')
+
+		for (i = 0; buff[i] != '\0'; i++)
+		{
+			if (buff[i] != ' ')
+			{
+				empty_line = 0;
+				break;
+			}
+		}
+		if (empty_line == 1)
 		{
 			exit_status = 0;
 			continue;
