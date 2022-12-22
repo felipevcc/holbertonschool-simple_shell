@@ -11,8 +11,8 @@ char *search_path(char *command)
 	char *path = _getenv("PATH"), *path_cpy;
 	char **path_split;
 	char *path_concat = NULL;
-	int i = 0, path_len = 0, status = 0;
-	struct stat info;	
+	int i = 0, path_len = 0;
+	struct stat info;
 
 	if (stat(command, &info) == 0)
 		return (command);
@@ -32,18 +32,19 @@ char *search_path(char *command)
 		path_concat = _strcat(path_split[i], command);
 
 		if (stat(path_concat, &info) == 0)
-		{
-			status = 1;
 			break;
-		}
 
 		i++;
 	}
+
 	free(path_cpy);
-	free(path_split);
 
-	if (status == 0)
+	if (path_split[i] == NULL)
+	{
+		free(path_split);
 		return (NULL);
+	}
 
+	free(path_split);
 	return (path_concat);
 }

@@ -19,6 +19,7 @@ int _strlen(char *s);
 char *_getenv(char *env_var);
 void *_calloc(unsigned int nmemb, unsigned int size);
 void _env(void);
+void execute(char **args);
 
 extern char **environ;
 
