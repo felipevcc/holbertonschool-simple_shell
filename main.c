@@ -30,14 +30,13 @@ int main(void)
 			_env();
 			continue;
 		}
-		else if (buff[0] == " ")
+		else if (buff[0] == ' ')
 		{
 			exit_status = 0;
 			continue;
 		}
 
 		args = _split(buff, " ");
-
 		args[0] = search_path(args[0]);
 
 		if (args[0] != NULL)
