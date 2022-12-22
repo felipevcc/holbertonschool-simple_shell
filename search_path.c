@@ -39,7 +39,7 @@ char *search_path(char *command)
 
 	free(path_cpy);
 
-	if (path_split[i] == NULL)
+	if (!path_split[i])
 	{
 		free(path_split);
 		return (NULL);

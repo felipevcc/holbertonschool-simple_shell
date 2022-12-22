@@ -5,7 +5,7 @@
  * @args: arguments
  */
 
-void execute(char **args)
+int execute(char **args)
 {
 	int id = fork(), status;
 
@@ -20,4 +20,6 @@ void execute(char **args)
 		if (WIFEXITED(status))
 			status = WEXITSTATUS(status);
 	}
+
+	return (status);
 }

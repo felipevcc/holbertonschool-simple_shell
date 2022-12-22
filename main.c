@@ -10,6 +10,7 @@ int main(void)
 	char *buff = NULL, **args;
 	size_t read_size = 0;
 	ssize_t buff_size = 0;
+	int exit_status = 0;
 
 	while (1)
 	{
@@ -32,11 +33,11 @@ int main(void)
 		args[0] = search_path(args[0]);
 
 		if (args[0] != NULL)
-			execute(args);
+			exit_status = execute(args);
 		else
 			perror("Error");
 
 		free(args);
 	}
-	return (0);
+	return (exit_status);
 }
