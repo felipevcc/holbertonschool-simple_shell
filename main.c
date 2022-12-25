@@ -30,6 +30,7 @@ int main(void)
 			_env();
 			continue;
 		}
+
 		if (empty_line(buff) == 1)
 		{
 			exit_status = 0;
@@ -43,7 +44,6 @@ int main(void)
 			exit_status = execute(args);
 		else
 			perror("Error");
-		free(args[0]);
 		free(args);
 	}
 	return (exit_status);

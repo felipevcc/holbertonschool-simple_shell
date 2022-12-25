@@ -8,7 +8,7 @@
 
 char *search_path(char *command)
 {
-	char *path = _getenv("PATH"), *path_cpy, *ret;
+	char *path = _getenv("PATH"), *path_cpy;
 	char **path_split;
 	char *path_concat = NULL;
 	int i = 0, path_len = 0;
@@ -28,6 +28,7 @@ char *search_path(char *command)
 
 		if (path_split[i][path_len - 1] != '/')
 			path_concat = _strcat(path_split[i], "/");
+
 		path_concat = _strcat(path_split[i], command);
 
 		if (stat(path_concat, &info) == 0)
@@ -35,17 +36,15 @@ char *search_path(char *command)
 
 		i++;
 	}
-	ret = malloc(_strlen(path_concat) + 1);
-	ret = _strcpy(ret, path_concat);
+
 	free(path_cpy);
 
 	if (!path_split[i])
 	{
-		free(ret);
 		free(path_split);
 		return (NULL);
 	}
 
 	free(path_split);
-	return (ret);
+	return (path_concat);
 }
