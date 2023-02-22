@@ -5,7 +5,7 @@
     ·
     <a href="https://github.com/felipevcc/holbertonschool-simple_shell#compilation-">Compilation</a>
     ·
-    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#command-list-">Commands</a>
+    <a href="https://github.com/felipevcc/holbertonschool-simple_shell#list-of-built-in-commands-">Commands</a>
     ·
     <a href="https://github.com/felipevcc/holbertonschool-simple_shell#usage-">Usage</a>
   </h6>
